@@ -66,9 +66,58 @@ int main()
         scanf("%d",&choice);
 
         switch(choice)
-        {
+{
+case 1:
+    addStudent();
+    break;
 
-        }
+case 2:
+    viewStudents();
+    break;
+
+case 3:
+    searchStudent();
+    break;
+
+case 4:
+    updateStudent();
+    break;
+
+case 5:
+    deleteStudent();
+    break;
+
+case 6:
+    totalStudents();
+    break;
+
+case 7:
+    averageCGPA();
+    break;
+
+case 8:
+    topperStudent();
+    break;
+
+case 9:
+    lowestCGPA();
+    break;
+
+case 10:
+    departmentStudents();
+    break;
+
+case 11:
+    feeStatus();
+    break;
+
+case 12:
+    printf("\nThank You...\n");
+    break;
+
+default:
+    printf("\nInvalid Choice!\n");
+}
 
     }while(choice!=12);
     return 0;
