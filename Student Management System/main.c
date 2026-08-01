@@ -251,7 +251,7 @@ void addStudent()
 
     printf("\nStudent Added Successfully.\n");
 }
-void viewStudents()
+ void viewStudents()
 {
     if(count == 0)
     {
@@ -259,26 +259,30 @@ void viewStudents()
         return;
     }
 
-    printf("\n================== ALL STUDENTS ==================\n");
+    printf("\n============================================================================================================================================================\n");
+    printf("%-5s %-15s %-15s %-5s %-7s %-12s %-5s %-6s %-15s %-25s %-15s %-10s %-6s\n",
+           "ID","Name","Father","Age","Gender","Department","Sem","CGPA","Phone","Email","Fee Status","Address","Grade");
+    printf("============================================================================================================================================================\n");
 
-    for(int i = 0; i < count; i++)
+    for(int i=0;i<count;i++)
     {
-        printf("\nStudent %d\n", i + 1);
-        printf("-----------------------------------------\n");
-        printf("ID         : %d\n", students[i].id);
-        printf("Name       : %s\n", students[i].name);
-        printf("Father Name: %s\n", students[i].father_name);
-        printf("Age        : %d\n", students[i].age);
-        printf("Gender     : %c\n", students[i].gender);
-        printf("Department : %s\n", students[i].department);
-        printf("Semester   : %d\n", students[i].semester);
-        printf("CGPA       : %.2f\n", students[i].cgpa);
-        printf("Phone      : %s\n", students[i].phone);
-        printf("Email      : %s\n", students[i].email);
-        printf("Address    : %s\n", students[i].address);
-        printf("Fee Status : %s\n", students[i].fee_status);
-        printf("Grade      : %c\n", students[i].grade);
+        printf("%-5d %-15s %-15s %-5d %-7c %-12s %-5d %-6.2f %-15s %-25s %-15s %-10s %-6c\n",
+               students[i].id,
+               students[i].name,
+               students[i].father_name,
+               students[i].age,
+               students[i].gender,
+               students[i].department,
+               students[i].semester,
+               students[i].cgpa,
+               students[i].phone,
+               students[i].email,
+               students[i].fee_status,
+               students[i].address,
+               students[i].grade);
     }
+
+    printf("============================================================================================================================================================\n");
 }
 void searchStudent()
 {
