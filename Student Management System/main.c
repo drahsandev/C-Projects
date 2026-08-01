@@ -441,3 +441,30 @@ void updateStudent()
 
     printf("Student Not Found!\n");
 }
+void deleteStudent()
+{
+    int id;
+
+    printf("Enter Student ID to Delete: ");
+    scanf("%d",&id);
+
+    for(int i=0;i<count;i++)
+    {
+        if(students[i].id==id)
+        {
+            for(int j=i;j<count-1;j++)
+            {
+                students[j]=students[j+1];
+            }
+
+            count--;
+
+            saveData();
+
+            printf("\nStudent Deleted Successfully!\n");
+            return;
+        }
+    }
+
+    printf("Student Not Found!\n");
+}
