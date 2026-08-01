@@ -190,6 +190,14 @@ void addStudent()
     printf("Enter Student ID: ");
     scanf("%d", &students[count].id);
     getchar();
+    for(int i=0;i<count;i++)
+    {
+        if(students[i].id==students[count].id)
+        {
+            printf("Student ID already exists!\n");
+            return;
+        }
+    }
     printf("Enter Name: ");
     fgets(students[count].name, sizeof(students[count].name), stdin);
     students[count].name[strcspn(students[count].name, "\n")] = '\0';
