@@ -468,3 +468,33 @@ void deleteStudent()
 
     printf("Student Not Found!\n");
 }
+void departmentStudents()
+{
+    char department[50];
+    int found=0;
+
+    getchar();
+
+    printf("Enter Department: ");
+    fgets(department,sizeof(department),stdin);
+    department[strcspn(department,"\n")]='\0';
+
+    printf("\nStudents in %s Department\n",department);
+    printf("--------------------------------------\n");
+
+    for(int i=0;i<count;i++)
+    {
+        if(strcmp(students[i].department,department)==0)
+        {
+            printf("ID : %d\n",students[i].id);
+            printf("Name : %s\n",students[i].name);
+            printf("CGPA : %.2f\n\n",students[i].cgpa);
+            found=1;
+        }
+    }
+
+    if(found==0)
+    {
+        printf("No Student Found!\n");
+    }
+}
