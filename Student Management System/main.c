@@ -498,3 +498,33 @@ void departmentStudents()
         printf("No Student Found!\n");
     }
 }
+void feeStatus()
+{
+    char status[20];
+    int found=0;
+
+    getchar();
+
+    printf("Enter Fee Status (Paid/Pending): ");
+    fgets(status,sizeof(status),stdin);
+    status[strcspn(status,"\n")]='\0';
+
+    printf("\nStudents with %s Fee Status\n",status);
+    printf("--------------------------------------\n");
+
+    for(int i=0;i<count;i++)
+    {
+        if(strcmp(students[i].fee_status,status)==0)
+        {
+            printf("ID : %d\n",students[i].id);
+            printf("Name : %s\n",students[i].name);
+            printf("Department : %s\n\n",students[i].department);
+            found=1;
+        }
+    }
+
+    if(found==0)
+    {
+        printf("No Student Found!\n");
+    }
+}
