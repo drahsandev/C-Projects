@@ -266,20 +266,7 @@ void addStudent()
 
     for(int i=0;i<count;i++)
     {
-        printf("%-5d %-15s %-15s %-5d %-7c %-12s %-5d %-6.2f %-15s %-25s %-15s %-10s %-6c\n",
-               students[i].id,
-               students[i].name,
-               students[i].father_name,
-               students[i].age,
-               students[i].gender,
-               students[i].department,
-               students[i].semester,
-               students[i].cgpa,
-               students[i].phone,
-               students[i].email,
-               students[i].fee_status,
-               students[i].address,
-               students[i].grade);
+        printf("%-5d %-15s %-15s %-5d %-7c %-12s %-5d %-6.2f %-15s %-25s %-15s %-10s %-6c\n",students[i].id,students[i].name,students[i].father_name,students[i].age,students[i].gender,students[i].department,students[i].semester,students[i].cgpa,students[i].phone,students[i].email,students[i].fee_status,students[i].address,students[i].grade);
     }
 
     printf("============================================================================================================================================================\n");
